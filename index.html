@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08111f" />
+    <meta
+      name="description"
+      content="Быстрое подключение Telegram MTProto proxy и VPN-ботов."
+    />
+    <meta property="og:title" content="Telegram Proxy & VPN" />
+    <meta
+      property="og:description"
+      content="MTProto proxy, резервный порт и проверенные VPN-ссылки."
+    />
+    <meta property="og:type" content="website" />
+    <title>Telegram Proxy & VPN</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas class="network-canvas" id="networkCanvas" aria-hidden="true"></canvas>
+    <div class="page-shell">
+      <header class="topbar" aria-label="Основная навигация">
+        <a class="brand" href="#top" aria-label="Telegram Proxy & VPN">
+          <span class="brand-mark">P</span>
+          <span class="brand-copy">
+            <span>Proxy</span>
+            <strong>VPN</strong>
+          </span>
+        </a>
+        <a class="topbar-link" href="https://t.me/proxy_anton">Канал</a>
+      </header>
+
+      <main id="top" class="hero">
+        <section class="hero-copy" aria-labelledby="pageTitle">
+          <p class="eyebrow">Telegram access</p>
+          <h1 id="pageTitle">Telegram Proxy & VPN</h1>
+          <p class="lead">
+            Подключите MTProto proxy или выберите VPN-бота. Основной маршрут
+            работает через российскую точку входа с зарубежным выходом.
+          </p>
+
+          <div class="status-row" aria-label="Маршрут прокси">
+            <span class="status-pill">
+              <span class="status-dot"></span>
+              RU edge
+            </span>
+            <span class="status-line"></span>
+            <span class="status-pill">FI primary</span>
+            <span class="status-line short"></span>
+            <span class="status-pill muted">Быстрый маршрут</span>
+          </div>
+        </section>
+
+        <section class="action-panel" aria-label="Ссылки подключения">
+          <a
+            class="primary-action"
+            href="tg://proxy?server=186.246.3.238&port=443&secret=70fb81f7a310a1709a951029300633a2"
+          >
+            <span class="action-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M4 12.2 20 4l-3.1 16-4.6-4.8-3.4 3.1.7-5.1L4 12.2Z" />
+              </svg>
+            </span>
+            <span>
+              <strong>Подключить MTProto proxy</strong>
+              <small>Основной порт 443</small>
+            </span>
+          </a>
+
+          <div class="action-grid">
+            <a
+              class="action-card"
+              href="https://t.me/djarbvpnbot?start=488223"
+            >
+              <span class="action-icon compact" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M8.5 13.5a4.5 4.5 0 0 1 0-6.4l1.6-1.6a4.5 4.5 0 0 1 6.4 6.4l-.9.9-2.1-2.1.9-.9a1.5 1.5 0 0 0-2.1-2.1L10.6 9.2a1.5 1.5 0 0 0 0 2.1l.7.7-2.1 2.1-.7-.6Zm7 3.4-1.6 1.6a4.5 4.5 0 0 1-6.4-6.4l.9-.9 2.1 2.1-.9.9a1.5 1.5 0 1 0 2.1 2.1l1.6-1.6a1.5 1.5 0 0 0 0-2.1l-.7-.7 2.1-2.1.7.7a4.5 4.5 0 0 1 0 6.4Z" />
+                </svg>
+              </span>
+              <span>
+                <strong>VPN bot</strong>
+                <small>djarbvpnbot</small>
+              </span>
+            </a>
+
+            <a
+              class="action-card"
+              href="https://t.me/vpn_liberty_bot?start=referral_142550432"
+            >
+              <span class="action-icon compact" aria-hidden="true">
+                <svg viewBox="0 0 24 24" focusable="false">
+                  <path d="M6 10V8a6 6 0 1 1 12 0v2h1.2c.8 0 1.3.6 1.3 1.3v8.2c0 .8-.6 1.3-1.3 1.3H4.8c-.8 0-1.3-.6-1.3-1.3v-8.2c0-.8.6-1.3 1.3-1.3H6Zm3 0h6V8a3 3 0 1 0-6 0v2Zm3 3.5a1.7 1.7 0 0 0-.9 3.1v1.7h1.8v-1.7a1.7 1.7 0 0 0-.9-3.1Z" />
+                </svg>
+              </span>
+              <span>
+                <strong>VPN Liberty</strong>
+                <small>vpn_liberty_bot</small>
+              </span>
+            </a>
+          </div>
+
+          <div class="copy-panel">
+            <span class="copy-label">MTProto ссылка</span>
+            <code id="proxyLink">tg://proxy?server=186.246.3.238&amp;port=443&amp;secret=70fb81f7a310a1709a951029300633a2</code>
+            <button class="copy-button" id="copyProxy" type="button">Скопировать</button>
+          </div>
+        </section>
+      </main>
+
+      <section class="details" aria-label="Дополнительные ссылки">
+        <article>
+          <span class="detail-index">01</span>
+          <h2>Proxy channel</h2>
+          <p>Канал с актуальными ссылками и обновлениями.</p>
+          <a href="https://t.me/proxy_anton">Открыть proxy_anton</a>
+        </article>
+        <article>
+          <span class="detail-index">02</span>
+          <h2>VPN links</h2>
+          <p>Две VPN-ссылки оставлены отдельными кнопками для быстрого выбора.</p>
+          <a href="https://t.me/vpn_liberty_bot?start=referral_142550432">Открыть Liberty</a>
+        </article>
+      </section>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Ссылка скопирована</div>
+    <script src="script.js"></script>
+  </body>
+</html>
