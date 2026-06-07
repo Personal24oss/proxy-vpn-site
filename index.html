@@ -6,15 +6,15 @@
     <meta name="theme-color" content="#070a10" />
     <meta
       name="description"
-      content="Быстрое подключение Telegram MTProto proxy и проверенных VPN-ссылок."
+      content="Бесплатные Telegram proxy и проверенные VPN для стабильной работы Telegram и остальных сервисов."
     />
-    <meta property="og:title" content="Telegram Proxy & VPN" />
+    <meta property="og:title" content="Proxy Anton" />
     <meta
       property="og:description"
-      content="MTProto proxy на 443 порту, VPN-ссылки и канал с обновлениями."
+      content="Подключите Telegram proxy одной кнопкой. Для остальных сервисов выберите VPN с понятной настройкой."
     />
     <meta property="og:type" content="website" />
-    <title>Telegram Proxy & VPN</title>
+    <title>Proxy Anton</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -22,100 +22,195 @@
 
     <div class="page-shell">
       <header class="topbar" aria-label="Основная навигация">
-        <a class="brand" href="#top" aria-label="Telegram Proxy & VPN">
-          <span class="brand-mark">P</span>
+        <a class="brand" href="#top" aria-label="Proxy Anton">
+          <span class="brand-mark">PA</span>
           <span class="brand-copy">
             <strong>Proxy Anton</strong>
-            <span>Telegram access</span>
+            <span>Telegram proxy и VPN</span>
           </span>
         </a>
         <nav class="topbar-actions" aria-label="Ссылки">
-          <a href="https://t.me/proxy_anton">Канал</a>
+          <a href="#telegram">Прокси Telegram</a>
           <a href="#vpn">VPN</a>
+          <a href="https://t.me/proxy_anton">Канал</a>
         </nav>
       </header>
 
       <main id="top" class="hero">
         <section class="hero-copy" aria-labelledby="pageTitle">
-          <p class="eyebrow">MTProto · 443 · RU edge</p>
-          <h1 id="pageTitle">Telegram Proxy & VPN</h1>
+          <p class="eyebrow">Бесплатно · одна кнопка · порт 443</p>
+          <h1 id="pageTitle">Безопасные прокси для Telegram и VPN для остальных сервисов</h1>
           <p class="lead">
-            Прокси для Telegram через российскую точку входа и зарубежный выход.
-            Ниже — основная ссылка на MTProto и два варианта VPN.
+            Подключите прокси для работы Telegram бесплатно нажатием одной кнопки.
+            Добавьте себе несколько вариантов на случай блокировок и переключайтесь
+            между ними прямо в Telegram.
           </p>
 
-          <div class="route" aria-label="Маршрут прокси">
-            <span class="route-node active">RU</span>
-            <span class="route-line"></span>
-            <span class="route-node">NL</span>
-            <span class="route-line"></span>
-            <span class="route-node">TG</span>
+          <div class="hero-actions" aria-label="Быстрые действия">
+            <a class="hero-primary" href="#telegram">Выбрать прокси</a>
+            <a class="hero-secondary" href="#vpn">Выбрать VPN</a>
           </div>
         </section>
 
-        <section class="connect-panel" aria-label="Быстрое подключение">
+        <section class="status-panel" aria-label="Основной прокси">
+          <div class="panel-header">
+            <span class="status-dot"></span>
+            <span>Основной Telegram proxy</span>
+          </div>
+          <strong>Вход в России, выход за рубежом</strong>
+          <p>
+            Основная ссылка работает через российскую точку входа с зарубежным
+            выходом в сеть. Для пользователя это обычное подключение внутри Telegram.
+          </p>
           <a
-            class="proxy-button"
+            class="big-connect"
             href="tg://proxy?server=mt.proxy-anton.ru&port=443&secret=dd642741acc57577a7dfcac3c597300ce8"
           >
-            <span class="button-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" focusable="false">
-                <path d="M21.6 4.7 18 20.8c-.3 1.2-1 1.5-2 .9l-5.3-3.9-2.6 2.5c-.3.3-.5.5-1.1.5l.4-5.4L17.2 6.6c.4-.4-.1-.6-.6-.2L4.5 14 1.8 13.1c-1.2-.4-1.2-1.2.3-1.8L20 4.4c.9-.3 1.7.2 1.6 1.3Z" />
-              </svg>
-            </span>
-            <span>
-              <strong>Подключить Telegram proxy</strong>
-              <small>mt.proxy-anton.ru · порт 443</small>
-            </span>
+            Подключить Telegram proxy
           </a>
-
-          <div class="copy-panel">
-            <span class="copy-label">MTProto ссылка</span>
-            <code id="proxyLink">tg://proxy?server=mt.proxy-anton.ru&amp;port=443&amp;secret=dd642741acc57577a7dfcac3c597300ce8</code>
-            <button class="copy-button" id="copyProxy" type="button">Скопировать</button>
-          </div>
-
-          <div class="signal-grid" aria-label="Статус маршрута">
-            <div>
-              <span>Вход</span>
-              <strong>Россия</strong>
-            </div>
-            <div>
-              <span>Выход</span>
-              <strong>NL</strong>
-            </div>
-            <div>
-              <span>Порт</span>
-              <strong>443</strong>
-            </div>
-          </div>
         </section>
       </main>
 
-      <section id="vpn" class="link-section" aria-label="Дополнительные ссылки">
-        <a class="link-tile proxy-channel" href="https://t.me/proxy_anton">
-          <span class="tile-index">01</span>
-          <span>
-            <strong>Канал с прокси</strong>
-            <small>Актуальные ссылки и обновления</small>
-          </span>
-        </a>
+      <section id="telegram" class="content-section" aria-labelledby="telegramTitle">
+        <div class="section-head">
+          <p class="eyebrow">Telegram proxy</p>
+          <h2 id="telegramTitle">Добавьте несколько прокси в Telegram</h2>
+          <p>
+            Если один вариант временно недоступен, выберите другой в настройках Telegram.
+            Все ссылки можно открыть сразу или скопировать вручную.
+          </p>
+        </div>
 
-        <a class="link-tile vpn-primary" href="https://t.me/djarbvpnbot?start=488223">
-          <span class="tile-index">02</span>
-          <span>
-            <strong>VPN bot</strong>
-            <small>djarbvpnbot</small>
-          </span>
-        </a>
+        <div class="proxy-grid">
+          <article class="proxy-card primary-card">
+            <span class="card-kicker">01 · основной</span>
+            <h3>Основной прокси</h3>
+            <p>Безопасный, быстрый и конфиденциальный вариант для ежедневной работы.</p>
+            <div class="card-actions">
+              <a
+                href="tg://proxy?server=mt.proxy-anton.ru&port=443&secret=dd642741acc57577a7dfcac3c597300ce8"
+              >
+                Подключить
+              </a>
+              <button
+                type="button"
+                data-copy="tg://proxy?server=mt.proxy-anton.ru&port=443&secret=dd642741acc57577a7dfcac3c597300ce8"
+              >
+                Копировать
+              </button>
+            </div>
+          </article>
 
-        <a class="link-tile vpn-secondary" href="https://t.me/vpn_liberty_bot?start=referral_142550432">
-          <span class="tile-index">03</span>
-          <span>
-            <strong>VPN Liberty</strong>
-            <small>vpn_liberty_bot</small>
-          </span>
-        </a>
+          <article class="proxy-card">
+            <span class="card-kicker">02 · запасной</span>
+            <h3>Запасной вход</h3>
+            <p>Используйте, если основная ссылка временно не открывается в Telegram.</p>
+            <div class="card-actions">
+              <a
+                href="tg://proxy?server=92.38.139.60&port=443&secret=dd70fb81f7a310a1709a951029300633a2"
+              >
+                Подключить
+              </a>
+              <button
+                type="button"
+                data-copy="tg://proxy?server=92.38.139.60&port=443&secret=dd70fb81f7a310a1709a951029300633a2"
+              >
+                Копировать
+              </button>
+            </div>
+          </article>
+
+          <article class="proxy-card">
+            <span class="card-kicker">03 · резерв</span>
+            <h3>Внешний резерв</h3>
+            <p>Сторонний прокси, который можно держать в Telegram на случай блокировок.</p>
+            <div class="card-actions">
+              <a
+                href="tg://proxy?server=5.188.150.135&port=443&secret=7b470a63966a8401e610549767a1c54a"
+              >
+                Подключить
+              </a>
+              <button
+                type="button"
+                data-copy="tg://proxy?server=5.188.150.135&port=443&secret=7b470a63966a8401e610549767a1c54a"
+              >
+                Копировать
+              </button>
+            </div>
+          </article>
+
+          <article class="proxy-card">
+            <span class="card-kicker">04 · обновления</span>
+            <h3>Канал с прокси</h3>
+            <p>Там публикуются актуальные и проверенные прокси, если основные ссылки поменяются.</p>
+            <div class="card-actions">
+              <a href="https://t.me/proxy_anton">Открыть канал</a>
+              <button type="button" data-copy="https://t.me/proxy_anton">Копировать</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="vpn" class="content-section vpn-section" aria-labelledby="vpnTitle">
+        <div class="section-head">
+          <p class="eyebrow">VPN</p>
+          <h2 id="vpnTitle">Для остальных сервисов</h2>
+          <p>
+            Если кроме Telegram не открываются сайты, приложения или сервисы,
+            выберите VPN. Инструкции по настройке для каждого устройства находятся
+            внутри самих ботов.
+          </p>
+        </div>
+
+        <div class="vpn-grid">
+          <article class="vpn-card">
+            <span class="card-kicker">VPN 1</span>
+            <h3>Allo VPN</h3>
+            <p>Без обхода белых списков. Подходит для обычного ежедневного использования.</p>
+            <div class="card-actions">
+              <a href="https://t.me/AlloNetVPN_bot?start=1k142550432">Выбрать VPN</a>
+              <button type="button" data-copy="https://t.me/AlloNetVPN_bot?start=1k142550432">
+                Копировать
+              </button>
+            </div>
+            <small>Как настроить: откройте бота и выберите инструкцию для своего устройства.</small>
+          </article>
+
+          <article class="vpn-card">
+            <span class="card-kicker">VPN 2</span>
+            <h3>VPN Liberty</h3>
+            <p>С обходом белых списков. Используйте, если обычный VPN не помогает.</p>
+            <div class="card-actions">
+              <a href="https://t.me/vpn_liberty_bot?start=referral_142550432">Выбрать VPN</a>
+              <button type="button" data-copy="https://t.me/vpn_liberty_bot?start=referral_142550432">
+                Копировать
+              </button>
+            </div>
+            <small>Как настроить: инструкции находятся внутри Telegram-бота.</small>
+          </article>
+
+          <article class="vpn-card">
+            <span class="card-kicker">VPN 3</span>
+            <h3>VPN Bot</h3>
+            <p>Дополнительный вариант с обходом белых списков на случай перегрузки других сервисов.</p>
+            <div class="card-actions">
+              <a href="https://t.me/djarbvpnbot?start=488223">Выбрать VPN</a>
+              <button type="button" data-copy="https://t.me/djarbvpnbot?start=488223">
+                Копировать
+              </button>
+            </div>
+            <small>Как настроить: откройте бота и следуйте инструкции для вашей системы.</small>
+          </article>
+        </div>
+      </section>
+
+      <section class="channel-band" aria-label="Канал Telegram">
+        <div>
+          <p class="eyebrow">Наш канал Telegram</p>
+          <h2>Актуальные прокси и VPN</h2>
+          <p>Публикуем самые свежие и проверенные ссылки, чтобы можно было быстро переключиться.</p>
+        </div>
+        <a href="https://t.me/proxy_anton">Открыть канал</a>
       </section>
     </div>
 

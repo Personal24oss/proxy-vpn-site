@@ -1,11 +1,14 @@
-const proxyLink = "tg://proxy?server=mt.proxy-anton.ru&port=443&secret=dd642741acc57577a7dfcac3c597300ce8";
-
-const copyButton = document.getElementById("copyProxy");
 const toast = document.getElementById("toast");
 
-copyButton?.addEventListener("click", async () => {
+document.addEventListener("click", async (event) => {
+  const button = event.target.closest("[data-copy]");
+  if (!button) return;
+
+  const value = button.getAttribute("data-copy");
+  if (!value) return;
+
   try {
-    await navigator.clipboard.writeText(proxyLink);
+    await navigator.clipboard.writeText(value);
     showToast("Ссылка скопирована");
   } catch {
     showToast("Скопируйте ссылку вручную");
@@ -13,6 +16,7 @@ copyButton?.addEventListener("click", async () => {
 });
 
 function showToast(text) {
+  if (!toast) return;
   toast.textContent = text;
   toast.classList.add("visible");
   window.clearTimeout(showToast.timer);
@@ -78,9 +82,9 @@ function drawRoutes() {
   context.lineWidth = 1;
   for (const lane of lanes) {
     const gradient = context.createLinearGradient(lane[0], lane[1], lane[4], lane[5]);
-    gradient.addColorStop(0, "rgba(255, 56, 86, 0.04)");
-    gradient.addColorStop(0.45, "rgba(43, 215, 255, 0.18)");
-    gradient.addColorStop(1, "rgba(62, 226, 143, 0.05)");
+    gradient.addColorStop(0, "rgba(255, 53, 86, 0.04)");
+    gradient.addColorStop(0.45, "rgba(40, 215, 255, 0.18)");
+    gradient.addColorStop(1, "rgba(66, 230, 141, 0.05)");
     context.strokeStyle = gradient;
     context.beginPath();
     context.moveTo(lane[0], lane[1]);
@@ -92,7 +96,7 @@ function drawRoutes() {
     packet.offset = (packet.offset + packet.speed) % 1;
     const lane = lanes[packet.lane];
     const point = quadraticPoint(lane, packet.offset);
-    context.fillStyle = packet.lane === 0 ? "rgba(255, 56, 86, 0.9)" : "rgba(43, 215, 255, 0.85)";
+    context.fillStyle = packet.lane === 0 ? "rgba(255, 53, 86, 0.9)" : "rgba(40, 215, 255, 0.85)";
     context.beginPath();
     context.arc(point.x, point.y, 2.8, 0, Math.PI * 2);
     context.fill();
