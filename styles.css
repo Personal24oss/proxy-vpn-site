@@ -349,6 +349,10 @@ h3 {
   color: var(--violet);
 }
 
+.proxy-card:nth-child(5) .card-kicker {
+  color: var(--amber);
+}
+
 .proxy-card p,
 .vpn-card p {
   margin-bottom: 4px;
