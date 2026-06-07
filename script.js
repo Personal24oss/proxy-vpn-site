@@ -1,4 +1,4 @@
-const proxyLink = "tg://proxy?server=186.246.3.238&port=8443&secret=70fb81f7a310a1709a951029300633a2";
+const proxyLink = "tg://proxy?server=mt.proxy-anton.ru&port=443&secret=dd642741acc57577a7dfcac3c597300ce8";
 
 const copyButton = document.getElementById("copyProxy");
 const toast = document.getElementById("toast");
