@@ -5,8 +5,8 @@ Static GitHub Pages site with Telegram proxy links, VPN referral links, and the 
 ## Links
 
 - Main proxy: `tg://proxy?server=mt.proxy-anton.ru&port=443&secret=dd642741acc57577a7dfcac3c597300ce8`
-- New RU to DE proxy: `tg://proxy?server=146.185.199.191&port=443&secret=ddce38c4534607878728128d978a858932`
-- New RU to FI proxy: `tg://proxy?server=91.243.86.37&port=443&secret=ddc3027e12f2d6b99277ff06f7406d9174`
+- New RU to DE proxy: `tg://proxy?server=mt2.proxy-anton.ru&port=443&secret=ddce38c4534607878728128d978a858932`
+- New RU to FI proxy: `tg://proxy?server=mt3.proxy-anton.ru&port=443&secret=ddc3027e12f2d6b99277ff06f7406d9174`
 - IP fallback: `tg://proxy?server=92.38.139.60&port=443&secret=dd70fb81f7a310a1709a951029300633a2`
 - External reserve: `tg://proxy?server=5.188.150.135&port=443&secret=7b470a63966a8401e610549767a1c54a`
 - Channel: `https://t.me/proxy_anton`
