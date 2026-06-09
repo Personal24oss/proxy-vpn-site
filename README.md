@@ -11,4 +11,4 @@ Static GitHub Pages site with Telegram proxy links, VPN referral links, and the 
 - Channel: `https://t.me/proxy_anton`
 - Allo VPN: `https://t.me/AlloNetVPN_bot?start=1k142550432`
 - VPN Liberty: `https://t.me/vpn_liberty_bot?start=referral_142550432`
-- VPN bot: `https://t.me/djarbvpnbot?start=488223`
+- DJARB VPN: `https://t.me/djarbvpnbot?start=488223`
