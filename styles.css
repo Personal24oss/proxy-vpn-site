@@ -323,8 +323,8 @@ h3 {
 
 .proxy-card,
 .vpn-card {
-  display: grid;
-  align-content: start;
+  display: flex;
+  flex-direction: column;
   gap: 10px;
   min-height: 248px;
   padding: 20px;
