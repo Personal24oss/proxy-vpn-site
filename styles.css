@@ -386,6 +386,27 @@ h3 {
   cursor: pointer;
 }
 
+.vpn-card .card-actions {
+  gap: 0;
+  margin: auto -20px -20px;
+}
+
+.vpn-card .card-actions a {
+  min-height: 52px;
+  border-right-width: 0;
+  border-bottom-width: 0;
+  border-radius: 0;
+}
+
+.vpn-card .card-actions a:first-child {
+  border-bottom-left-radius: var(--radius);
+}
+
+.vpn-card .card-actions a:last-child {
+  border-right-width: 1px;
+  border-bottom-right-radius: var(--radius);
+}
+
 .vpn-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -651,6 +672,24 @@ h3 {
   .card-actions {
     align-items: stretch;
     flex-direction: column;
+  }
+
+  .vpn-card .card-actions {
+    margin-right: -16px;
+    margin-bottom: -16px;
+    margin-left: -16px;
+  }
+
+  .vpn-card .card-actions a {
+    border-right-width: 1px;
+  }
+
+  .vpn-card .card-actions a:first-child {
+    border-bottom-left-radius: 0;
+  }
+
+  .vpn-card .card-actions a:last-child {
+    border-bottom-left-radius: var(--radius);
   }
 
   .card-actions a,
