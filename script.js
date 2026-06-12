@@ -42,13 +42,21 @@ function toggleGuide(button) {
     const otherGuide = document.getElementById(otherButton.getAttribute("data-guide-toggle"));
     if (!otherGuide) return;
     otherGuide.hidden = true;
+    otherGuide.closest(".vpn-card")?.classList.remove("guide-open");
     otherButton.setAttribute("aria-expanded", "false");
     otherButton.textContent = "Посмотреть инструкцию";
   });
 
   guide.hidden = !shouldOpen;
+  guide.closest(".vpn-card")?.classList.toggle("guide-open", shouldOpen);
   button.setAttribute("aria-expanded", String(shouldOpen));
   button.textContent = shouldOpen ? "Скрыть инструкцию" : "Посмотреть инструкцию";
+
+  if (shouldOpen) {
+    window.requestAnimationFrame(() => {
+      guide.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }
 }
 
 const canvas = document.getElementById("networkCanvas");
