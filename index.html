@@ -15,7 +15,7 @@
     />
     <meta property="og:type" content="website" />
     <title>Proxy Anton</title>
-    <link rel="stylesheet" href="styles.css?v=20260609-2" />
+    <link rel="stylesheet" href="styles.css?v=20260612-1" />
   </head>
   <body>
     <canvas class="network-canvas" id="networkCanvas" aria-hidden="true"></canvas>
@@ -176,9 +176,24 @@
             <span class="card-kicker">VPN 1</span>
             <h3>Allo VPN</h3>
             <p>Без обхода белых списков, с активной реферальной ссылкой.</p>
+            <div class="vpn-guide" id="allonet-guide" hidden>
+              <ol class="guide-steps">
+                <li>Откройте бота и нажмите «Начать установку».</li>
+                <li>Выберите своё устройство: iPhone / iPad, Android, MacOS, Windows, Android TV или Apple TV.</li>
+                <li>Следуйте инструкции, которую бот покажет именно для вашего устройства.</li>
+              </ol>
+            </div>
             <div class="card-actions">
               <a href="https://t.me/AlloNetVPN_bot?start=1k142550432">Перейти</a>
-              <a class="secondary-action" href="https://t.me/AlloNetVPN_bot?start=1k142550432">Как настроить</a>
+              <button
+                class="secondary-action"
+                type="button"
+                data-guide-toggle="allonet-guide"
+                aria-controls="allonet-guide"
+                aria-expanded="false"
+              >
+                Посмотреть инструкцию
+              </button>
             </div>
           </article>
 
@@ -186,9 +201,25 @@
             <span class="card-kicker">VPN 2</span>
             <h3>VPN Liberty</h3>
             <p>С обходом белых списков.</p>
+            <div class="vpn-guide" id="liberty-guide" hidden>
+              <ol class="guide-steps">
+                <li>Откройте бота, нажмите «Старт», затем кнопку «Подключиться».</li>
+                <li>Скачайте приложение Happ по ссылке из бота.</li>
+                <li>Нажмите «Добавить подписку в Happ». Если кнопка не сработала, скопируйте ссылку и вставьте её в Happ вручную.</li>
+                <li>После добавления подписки вернитесь в бота и нажмите «Готово».</li>
+              </ol>
+            </div>
             <div class="card-actions">
               <a href="https://t.me/vpn_liberty_bot?start=referral_142550432">Перейти</a>
-              <a class="secondary-action" href="https://t.me/vpn_liberty_bot?start=referral_142550432">Как настроить</a>
+              <button
+                class="secondary-action"
+                type="button"
+                data-guide-toggle="liberty-guide"
+                aria-controls="liberty-guide"
+                aria-expanded="false"
+              >
+                Посмотреть инструкцию
+              </button>
             </div>
           </article>
 
@@ -196,70 +227,27 @@
             <span class="card-kicker">VPN 3</span>
             <h3>DJARB VPN</h3>
             <p>С обходом белых списков.</p>
+            <div class="vpn-guide" id="djarb-guide" hidden>
+              <ol class="guide-steps">
+                <li>Нажмите «Принимаю и регистрируюсь».</li>
+                <li>После регистрации откройте «Мои конфигурации».</li>
+                <li>Нажмите «Создать конфигурацию», выберите VLESS и локацию «Автовыбор».</li>
+                <li>Нажмите «Настроить подключение» и выберите инструкцию для своего устройства.</li>
+              </ol>
+            </div>
             <div class="card-actions">
               <a href="https://t.me/djarbvpnbot?start=488223">Перейти</a>
-              <a class="secondary-action" href="#djarb-setup">Как настроить</a>
+              <button
+                class="secondary-action"
+                type="button"
+                data-guide-toggle="djarb-guide"
+                aria-controls="djarb-guide"
+                aria-expanded="false"
+              >
+                Посмотреть инструкцию
+              </button>
             </div>
           </article>
-        </div>
-
-        <div id="djarb-setup" class="setup-guide" aria-labelledby="djarbSetupTitle">
-          <div class="section-head">
-            <p class="eyebrow">Как настроить</p>
-            <h2 id="djarbSetupTitle">DJARB VPN</h2>
-            <p>
-              Откройте бота и выполните шаги ниже. В конце бот покажет отдельную
-              страницу с инструкциями и ссылками для любого устройства.
-            </p>
-          </div>
-
-          <ol class="setup-steps">
-            <li>
-              <div class="setup-copy">
-                <strong>Примите оферту</strong>
-                <span>Нажмите кнопку «Принимаю и регистрируюсь».</span>
-              </div>
-              <figure class="setup-shot">
-                <img src="assets/djarb/step-1.png" alt="DJARB VPN: принятие оферты" loading="lazy" />
-              </figure>
-            </li>
-            <li>
-              <div class="setup-copy">
-                <strong>Откройте конфигурации</strong>
-                <span>После регистрации нажмите «Мои конфигурации».</span>
-              </div>
-              <figure class="setup-shot">
-                <img src="assets/djarb/step-2.png" alt="DJARB VPN: кнопка мои конфигурации" loading="lazy" />
-              </figure>
-            </li>
-            <li>
-              <div class="setup-copy">
-                <strong>Создайте конфигурацию</strong>
-                <span>Выберите «Создать конфигурацию», затем протокол VLESS.</span>
-              </div>
-              <figure class="setup-shot">
-                <img src="assets/djarb/step-3.png" alt="DJARB VPN: выбор протокола VLESS" loading="lazy" />
-              </figure>
-            </li>
-            <li>
-              <div class="setup-copy">
-                <strong>Выберите локацию</strong>
-                <span>Поставьте локацию «Автовыбор» и нажмите «Подтвердить».</span>
-              </div>
-              <figure class="setup-shot">
-                <img src="assets/djarb/step-4.png" alt="DJARB VPN: конфигурация VLESS создана" loading="lazy" />
-              </figure>
-            </li>
-            <li>
-              <div class="setup-copy">
-                <strong>Настройте подключение</strong>
-                <span>Нажмите «Настроить подключение» и выберите инструкцию для своего устройства.</span>
-              </div>
-              <figure class="setup-shot">
-                <img src="assets/djarb/step-5.png" alt="DJARB VPN: страница настройки подключения" loading="lazy" />
-              </figure>
-            </li>
-          </ol>
         </div>
       </section>
 
@@ -274,6 +262,6 @@
     </div>
 
     <div class="toast" id="toast" role="status" aria-live="polite">Ссылка скопирована</div>
-    <script src="script.js"></script>
+    <script src="script.js?v=20260612-1"></script>
   </body>
 </html>

@@ -1,6 +1,12 @@
 const toast = document.getElementById("toast");
 
 document.addEventListener("click", async (event) => {
+  const guideButton = event.target.closest("[data-guide-toggle]");
+  if (guideButton) {
+    toggleGuide(guideButton);
+    return;
+  }
+
   const button = event.target.closest("[data-copy]");
   if (!button) return;
 
@@ -23,6 +29,26 @@ function showToast(text) {
   showToast.timer = window.setTimeout(() => {
     toast.classList.remove("visible");
   }, 2200);
+}
+
+function toggleGuide(button) {
+  const guideId = button.getAttribute("data-guide-toggle");
+  const guide = guideId ? document.getElementById(guideId) : null;
+  if (!guide) return;
+
+  const shouldOpen = guide.hidden;
+
+  document.querySelectorAll("[data-guide-toggle]").forEach((otherButton) => {
+    const otherGuide = document.getElementById(otherButton.getAttribute("data-guide-toggle"));
+    if (!otherGuide) return;
+    otherGuide.hidden = true;
+    otherButton.setAttribute("aria-expanded", "false");
+    otherButton.textContent = "Посмотреть инструкцию";
+  });
+
+  guide.hidden = !shouldOpen;
+  button.setAttribute("aria-expanded", String(shouldOpen));
+  button.textContent = shouldOpen ? "Скрыть инструкцию" : "Посмотреть инструкцию";
 }
 
 const canvas = document.getElementById("networkCanvas");
